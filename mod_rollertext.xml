@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+type="module"
+	version="0.5.0 RC1"
+client="site"
+method ="upgrade">
+	<name>mod_rollertext</name>
+	<author>José A. Cidre Bardelás</author>
+	<creationDate>Julho 2011</creationDate>
+	<copyright>Copyright (C) 2011 Joomla Empresa and José A. Cidre Bardelás - All Rights Reserved</copyright>
+	<license>GNU General Public License version 2 or later; see http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>info@joomlaempresa.com</authorEmail>
+	<authorUrl>http://joomlaempresa.es</authorUrl>
+	<version>0.7.1</version>
+	<description>DESCRICOM</description>
+	<files>
+		<filename module="mod_rollertext">mod_rollertext.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_rollertext.xml</filename>
+		<folder>css</folder>
+		<folder>elements</folder>
+		<folder>imagens</folder>
+		<folder>js</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.mod_rollertext.ini</language>
+		<language tag="en-GB">en-GB.mod_rollertext.sys.ini</language>
+		<language tag="gl-ES">gl-ES.mod_rollertext.ini</language>
+		<language tag="gl-ES">gl-ES.mod_rollertext.sys.ini</language>
+		<language tag="ca-ES">ca-ES.mod_rollertext.ini</language>
+		<language tag="ca-ES">ca-ES.mod_rollertext.sys.ini</language>
+		<language tag="es-ES">es-ES.mod_rollertext.ini</language>
+		<language tag="es-ES">es-ES.mod_rollertext.sys.ini</language>
+		<language tag="pt-PT">pt-PT.mod_rollertext.ini</language>
+		<language tag="pt-PT">pt-PT.mod_rollertext.sys.ini</language>
+		<language tag="pt-BR">pt-BR.mod_rollertext.ini</language>
+		<language tag="pt-BR">pt-BR.mod_rollertext.sys.ini</language>
+	</languages>
+	<media destination="images_rollertext" folder="media">
+		<file>index.html</file>
+		<file>roller_background_example_1.png</file>
+		<file>roller_background_example_2.png</file>
+		<file>roller_background_example_3.png</file>
+	</media>
+	<config>
+	<fields name="params" addfieldpath="/modules/mod_rollertext/elements">
+	<fieldset name="basic">
+	<field name="posicom_painel" type="list" label="POSICOM_PAINEL" description="POSICOM_PAINEL_DET" default="right">
+		<option value="left">A_ESQUERDA</option>
+		<option value="right">A_DIREITA</option>
+	</field>
+	<field name="sobreplanta" type="list" label="SOBREPLANTA" description="SOBREPLANTA_DET" default="default">
+		<option value="default">POR_OMISSOM</option>
+		<option value="lozenge">LOZENGE</option>
+	</field>
+	<field name="amplo_painel" type="text" default="33" label="AMPLO_PAINEL" description="AMPLO_PAINEL_DET" />
+	<field name="cor_painel" type="colorpicker" default="#000000" label="COR_FONDO_PAINEL" description="COR_FONDO_PAINEL_DET" />
+	<field name="alto_texto" type="text" default="70" label="ALTO_TEXTO" description="ALTO_TEXTO_DET" />
+	<field name="margsup_texto" type="text" default="50" label="MARGEM_SUPERIOR_TEXTO" description="MARGEM_SUPERIOR_TEXTO_DET" />
+	<field name="margesq_texto" type="text" default="30" label="MARGEM_ESQUERDA_TEXTO" description="MARGEM_ESQUERDA_TEXTO_DET" />
+	<field name="margdir_texto" type="text" default="20" label="MARGEM_DIREITA_TEXTO" description="MARGEM_DIREITA_TEXTO_DET" />
+	<field name="separa_texto" type="text" default="15" label="SEPARACOM_TEXTO_BARRA" description="SEPARACOM_TEXTO_BARRA_DET" />
+	<field name="trans_painel" type="text" default="0.7" label="TRANSPARENCIA_PAINEL" description="TRANSPARENCIA_PAINEL_DET" />
+	<field name="anim_painel" type="text" default="800" label="DURACOM_ANIMACOM_PAINEL" description="DURACOM_ANIMACOM_PAINEL_DET" />
+	<field name="cor_borda" type="colorpicker" default="#000000" label="COR_BORDA_IMAGEM" description="COR_BORDA_IMAGEM_DET" />
+	<field name="espessura_borda" type="text" default="1" label="ESPESSURA_BORDA_IMAGEM" description="ESPESSURA_BORDA_IMAGEM_DET" />
+	<field name="estilo_borda" type="list" default="solid" label="ESTILO_BORDA_IMAGEM" description="ESTILO_BORDA_IMAGEM_DET" >
+		<option value="none">NENGUM</option>
+		<option value="dotted">PONTILHADA</option>
+		<option value="dashed">TRACEJADA</option>
+		<option value="solid">SOLIDA</option>
+		<option value="double">DOBRE</option>
+		<option value="groove">ENTALHADA</option>
+		<option value="ridge">ESTRIADA</option>
+		<option value="inset">GRAVURA_DENTRO</option>
+		<option value="outset">GRAVURA_FORA</option>
+    </field>
+	<field name="posicom_rolagem" type="list" label="POSICOM_BARRA_ROLAGEM" description="POSICOM_BARRA_ROLAGEM_DET" default="left">
+		<option value="left">A_ESQUERDA</option>
+		<option value="right">A_DIREITA</option>
+	</field>
+	<field name="imagem" type="imagelist" label="IMAGEM" description="IMAGEM_DET" directory="media/images_rollertext" hide_none="true" hide_default="true"/>
+	<field name="carregar_jquery" type="radio" label="CARREGAR_JQUERY" description="CARREGAR_JQUERY_DET" default="1">
+		<option value="1">SIM</option>
+		<option value="0">NOM</option>
+	</field>
+	<field name="amostrar_texto" type="radio" label="AMOSTRAR_TEXTO" description="AMOSTRAR_TEXTO_DET" default="0">
+		<option value="1">SIM</option>
+		<option value="0">NOM</option>
+	</field>
+	<field name="id_artigo" type="modal_article" default="0" label="ESCOLHE_ARTIGO" description="ESCOLHE_ARTIGO_DET" />
+	<field name="ligacom_externa" type="text" default="" label="LIGACOM_EXTERNA" description="LIGACOM_EXTERNA_DET" />
+	<field name="ligacom_externa_novapagina" type="radio" label="LIGACOM_EXTERNA_NOVAPAGINA" description="LIGACOM_EXTERNA_NOVAPAGINA_DET" default="1">
+		<option value="1">SIM</option>
+		<option value="0">NOM</option>
+	</field>
+</fieldset>
+</fields>
+</config>
+</extension>
